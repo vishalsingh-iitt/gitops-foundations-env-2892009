@@ -1,2 +1,3 @@
 #!/bin/bash
-find . -type f -exec sed -i 's/{dockerHubUsername}/'$1'/g' {} +
+export LC_ALL=C
+find . -type f ! -name setup.sh -exec sed -i '' 's/{dockerHubUsername}/'"$1"'/g' {} +
